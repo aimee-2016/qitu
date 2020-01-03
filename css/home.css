@@ -1,0 +1,43 @@
+.wrap {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    background: rgba(0, 0, 0, .2);
+    font-family: Microsoft YaHei;
+    margin: 0;
+    padding: 0
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+    /* IE 兼容 */
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header nav a {
+    margin-right: 150px;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    vertical-align: middle;
+    text-decoration: none
+}
+header nav a:last-child {
+    margin-right: 0;
+}
+.video-bg {
+    width: 100%;
+}
