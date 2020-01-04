@@ -1,43 +1,119 @@
-.wrap {
-    width: 1400px;
-    margin: 0 auto;
-}
+
 
 body {
-    background: rgba(0, 0, 0, .2);
     font-family: Microsoft YaHei;
-    margin: 0;
-    padding: 0
+    background: url('../image/home/bg-left.png') 0 2100px no-repeat;
 }
 
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
+.video-bg {
+    position: relative;
+    /* width: 100%; */
 }
 
-.clearfix {
-    zoom: 1;
-    /* IE 兼容 */
-}
-
-header {
+.video-bg .img-wrap {
     position: absolute;
-    top: 0;
+    bottom: 444px;
     width: 100%;
+    text-align: center;
 }
 
-header nav a {
-    margin-right: 150px;
-    font-size: 20px;
+.video-bg .btns {
+    position: absolute;
+    bottom: 240px;
+    width: 100%;
+    text-align: center;
+}
+
+.video-bg .btns a {
+    display: inline-block;
+    width: 244px;
+    height: 74px;
+    margin-right: 72px;
+    background: linear-gradient(90deg, rgba(102, 74, 244, 1), rgba(186, 90, 250, 1));
+    border-radius: 37px;
+    font-size: 30px;
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
-    vertical-align: middle;
-    text-decoration: none
+    text-align: center;
+    line-height: 74px;
 }
-header nav a:last-child {
+
+.video-bg .btns a:last-child {
     margin-right: 0;
 }
-.video-bg {
-    width: 100%;
+
+.video-bg .btns a img {
+    margin-right: 8px;
+    vertical-align: middle;
 }
+
+.headline {
+    padding: 100px 0 60px 0;
+    text-align: center;
+}
+
+.headline h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+}
+
+.headline span {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(51, 51, 51, 1);
+}
+
+.brodcast {
+    position: relative;
+}
+
+.brodcast .main ul {
+    text-align: center;
+}
+
+.brodcast .main ul li {
+    display: inline-block;
+    margin-right: 16px;
+    width: 330px;
+    height: 500px;
+    background: rgba(80, 255, 241, 1);
+    border-radius: 20px;
+}
+
+.brodcast .main ul li:last-child {
+    margin-right: 0;
+}
+
+.brodcast .main ul li:hover {
+    box-shadow: 0px 10px 20px 0px rgba(118, 1, 185, 0.4);
+}
+
+.application {
+    text-align: center;
+}
+
+.qualification .main {
+    height: 940px;
+    background: url('../image/home/qualification-bg.png') top right no-repeat;
+}
+
+.qualification .main ul {
+    padding-top: 170px;
+    text-align: center;
+}
+
+.qualification .main ul li {
+    display: inline-block;
+    margin-right: 30px;
+    width: 318px;
+    height: 432px;
+    background: rgba(80, 255, 241, 1);
+    border-radius: 20px;
+}
+
+.qualification .main ul li:last-child {
+    margin-right: 0;
+}
+
