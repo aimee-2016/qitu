@@ -1,24 +1,15 @@
 .banner {
     height: 950px;
     padding-top: 310px;
-    background: #753DE8;
+    background: url('../image/partner/banner-bg.png') center no-repeat;
 }
 
-.banner h1 {
-    width: 552px;
-    margin-left: 48px;
-    font-size: 122px;
-    font-family: BDZongYi-A001;
-    font-weight: normal;
-    color: rgba(255, 255, 255, 1);
-    line-height: 172px;
-}
 
-.main {
+.ad {
     padding-top: 40px;
 }
 
-.main .tab {
+.tab {
     width: 490px;
     height: 60px;
     line-height: 60px;
@@ -29,14 +20,14 @@
     font-size: 24px;
 }
 
-.main .tab a {
+.tab a {
     display: inline-block;
     width: 256px;
     text-align: center;
     line-height: 56px;
 }
 
-.main .tab .selected {
+.tab .selected {
     width: 226px;
     height: 56px;
     background: rgba(117, 61, 232, 1);
@@ -44,23 +35,23 @@
     color: #fff;
 }
 
-.main .content {
+.ad .content {
     height: 1418px;
     margin-top: 110px;
     padding-top: 174px;
     background: url('../image/advantage/ad-bg.png') center no-repeat;
 }
 
-.main .content>div {
+.ad .content>div {
     position: relative;
     height: 340px;
 }
-.main .content> .row-2 {
+.ad .content> .row-2 {
     position: relative;
     height: 320px;
 }
 
-.main .content .img-wrap {
+.ad .content .img-wrap {
     position: absolute;
     display: inline-block;
     width: 250px;
@@ -72,13 +63,13 @@
     cursor: pointer;
     color: #333;
 }
-.main .content .img-wrap p {
+.ad .content .img-wrap p {
     margin-top: 30px;
     font-size: 24px;
     font-family:PingFang SC;
 }
 
-.main .content .img-wrap:hover {
+.ad .content .img-wrap:hover {
     background: rgba(133, 74, 255, 1);
     box-shadow: 0px 4px 27px 0px rgba(117, 61, 232, 0.43);
     color: #fff;
@@ -86,73 +77,73 @@
     -webkit-animation: none; */
 }
 
-.main .content .row-1 .img-wrap:nth-of-type(1) {
+.ad .content .row-1 .img-wrap:nth-of-type(1) {
     left: 200px;
     top: 10px;
     animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate;
 }
 
-.main .content .row-1 .img-wrap:nth-of-type(2) {
+.ad .content .row-1 .img-wrap:nth-of-type(2) {
     left: 550px;
     top: 30px;
     animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate;
 }
 
-.main .content .row-1 .img-wrap:nth-of-type(3) {
+.ad .content .row-1 .img-wrap:nth-of-type(3) {
     left: 900px;
     top: 0px;
     animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate;
 }
-.main .content .row-2 .img-wrap:nth-of-type(1) {
+.ad .content .row-2 .img-wrap:nth-of-type(1) {
     left: 100px;
     top: 10px;
     animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate;
 }
 
-.main .content .row-2 .img-wrap:nth-of-type(2) {
+.ad .content .row-2 .img-wrap:nth-of-type(2) {
     left: 450px;
     top: 30px;
     animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate;
 }
 
-.main .content .row-2 .img-wrap:nth-of-type(3) {
+.ad .content .row-2 .img-wrap:nth-of-type(3) {
     left: 800px;
     top: 30px;
     animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate;
 }
-.main .content .row-2 .img-wrap:nth-of-type(4) {
+.ad .content .row-2 .img-wrap:nth-of-type(4) {
     left: 1200px;
     top: 20px;
     animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate;
 }
-.main .content .row-3 .img-wrap:nth-of-type(1) {
+.ad .content .row-3 .img-wrap:nth-of-type(1) {
     left: 120px;
     top: 10px;
     animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate;
 }
 
-.main .content .row-3 .img-wrap:nth-of-type(2) {
+.ad .content .row-3 .img-wrap:nth-of-type(2) {
     left: 450px;
     top: 30px;
     animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate;
 }
 
-.main .content .row-3 .img-wrap:nth-of-type(3) {
+.ad .content .row-3 .img-wrap:nth-of-type(3) {
     left: 800px;
     top: 0px;
     animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate;
 }
-.main .content .row-3 .img-wrap:nth-of-type(4) {
+.ad .content .row-3 .img-wrap:nth-of-type(4) {
     left: 1100px;
     top: 0px;
     animation: updown3 3s infinite alternate;
@@ -213,4 +204,108 @@
     to {
         top: 20px;
     }
+}
+
+.partner >div {
+    height: 1000px;
+    color: #333;
+    
+}
+/* .partner >div:nth-of-type(odd) {
+    background-color: antiquewhite;
+}
+.partner >div:nth-of-type(even) {
+    background-color: gray;
+} */
+.partner .row-1 {
+    height: 942px;
+    background: url('../image/partner/partner-row-1.png') top left no-repeat;
+}
+.partner .row-2 {
+    background: url('../image/partner/partner-row-2.png') top right no-repeat;
+}
+.partner .row-2 p,.partner .row-3 p,.partner .row-4 p{
+    font-size: 24px;
+}
+.partner .row-2 {
+    height: 1630px;
+}
+.partner .row-3 {
+    background: url('../image/partner/partner-row-3.png') top left no-repeat;
+}
+.partner .row-3 {
+    height: 600px;
+}
+.partner .row-4 {
+    background: url('../image/partner/partner-row-4.png') bottom right no-repeat;
+}
+.partner .row-4 {
+    height: 1400px;
+}
+.partner .row-5 {
+    background: url('../image/partner/partner-row-5.png') top left no-repeat;
+}
+.partner .row-5 {
+    height: 1700px;
+}
+.partner .row-5 p{
+    font-size: 20px;
+}
+.partner .left {
+    float: left;
+}
+.partner .right {
+    float: right;
+}
+
+.partner  h4 {
+    margin-bottom: 30px;
+    font-size:36px;
+    font-weight: bold;
+}
+.partner  p {
+    font-size:30px;
+    line-height: 2;
+    font-family:PingFang SC;
+}
+.partner  dl dt {
+    font-weight: bold;
+    line-height: 2;
+}
+.partner  dl dd {
+    font-size:20px;
+    line-height: 1.5;
+}
+.w540 {
+    width: 540px;
+}
+.w418 {
+    width: 418px;
+}
+.w650 {
+    width: 650px;
+}
+.w550 {
+    width: 550px
+}
+.w730 {
+    width: 730px;
+}
+.mt800 {
+    margin-top: 800px;
+}
+.mt346 {
+    margin-top: 346px;
+}
+.mt320 {
+    margin-top: 320px;
+}
+.mt150 {
+    margin-top: 150px;
+}
+.mt350 {
+    margin-top:350px
+}
+.mt120 {
+    margin-top: 120px;
 }
