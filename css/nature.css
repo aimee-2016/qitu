@@ -1,1 +1,33 @@
-
+.natrue {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.natrue h3 {
+    color: #333333;
+    font-family: 'PingFang-SC-Heavy', 'Microsoft YaHei';
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+.na-back {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+.na-back img {
+    width: inherit;
+    height: 800px;
+}
+.na-back .na-bright {
+    position: absolute;
+    right: 34px;
+    width: 589px;
+    height: 648px;
+    border-radius: 26px;
+    border: 1px solid #333333;
+    top: 320px;
+}
+.natrue .na-carousel {
+    margin-top: 200px;
+}

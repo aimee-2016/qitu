@@ -31,10 +31,10 @@
     <div class="banner">
     </div>
     <div class="tab">
-        <a href="" id="partner">公会入驻</a>
-        <a href="" class="selected" id="advantage">平台优势</a>
+        <span id="partner">公会入驻</span>
+        <span class="selected" id="advantage">平台优势</span>
     </div>
-    <div class="ad" style="display: none;">
+    <div class="ad">
         <div class="content">
             <div class="row-1">
                 <div class="img-wrap">
@@ -205,9 +205,19 @@
     <script src="./js/jquery-3.4.1.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            console.log(this)
-
+        $(function(){
+            $('#partner').click(function() {
+                $(this).parent().children().removeClass('selected')
+                $(this).addClass("selected")
+                $('.ad').css('display','none')
+                $('.partner').css('display','block')
+            })
+            $('#advantage').click(function() {
+                $(this).parent().children().removeClass('selected')
+                $(this).addClass("selected")
+                $('.ad').css('display','block')
+                $('.partner').css('display','none')
+            })
         });
     </script>
 </body>
