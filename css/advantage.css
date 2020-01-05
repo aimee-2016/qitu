@@ -1,1 +1,216 @@
+.banner {
+    height: 950px;
+    padding-top: 310px;
+    background: #753DE8;
+}
 
+.banner h1 {
+    width: 552px;
+    margin-left: 48px;
+    font-size: 122px;
+    font-family: BDZongYi-A001;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 1);
+    line-height: 172px;
+}
+
+.main {
+    padding-top: 40px;
+}
+
+.main .tab {
+    width: 490px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    background: rgba(225, 213, 250, 1);
+    box-shadow: 0px 9px 16px 0px rgba(159, 116, 248, 0.38);
+    border-radius: 30px;
+    font-size: 24px;
+}
+
+.main .tab a {
+    display: inline-block;
+    width: 256px;
+    text-align: center;
+    line-height: 56px;
+}
+
+.main .tab .selected {
+    width: 226px;
+    height: 56px;
+    background: rgba(117, 61, 232, 1);
+    border-radius: 28px;
+    color: #fff;
+}
+
+.main .content {
+    height: 1418px;
+    margin-top: 110px;
+    padding-top: 174px;
+    background: url('../image/advantage/ad-bg.png') center no-repeat;
+}
+
+.main .content>div {
+    position: relative;
+    height: 340px;
+}
+.main .content> .row-2 {
+    position: relative;
+    height: 320px;
+}
+
+.main .content .img-wrap {
+    position: absolute;
+    display: inline-block;
+    width: 250px;
+    height: 298px;
+    padding-top: 60px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+}
+.main .content .img-wrap p {
+    margin-top: 30px;
+    font-size: 24px;
+    font-family:PingFang SC;
+}
+
+.main .content .img-wrap:hover {
+    background: rgba(133, 74, 255, 1);
+    box-shadow: 0px 4px 27px 0px rgba(117, 61, 232, 0.43);
+    color: #fff;
+    /* animation: none;
+    -webkit-animation: none; */
+}
+
+.main .content .row-1 .img-wrap:nth-of-type(1) {
+    left: 200px;
+    top: 10px;
+    animation: updown1 3s infinite alternate;
+    -webkit-animation: updown1 3s infinite alternate;
+}
+
+.main .content .row-1 .img-wrap:nth-of-type(2) {
+    left: 550px;
+    top: 30px;
+    animation: updown2 3s infinite alternate;
+    -webkit-animation: updown2 3s infinite alternate;
+}
+
+.main .content .row-1 .img-wrap:nth-of-type(3) {
+    left: 900px;
+    top: 0px;
+    animation: updown3 3s infinite alternate;
+    -webkit-animation: updown3 3s infinite alternate;
+}
+.main .content .row-2 .img-wrap:nth-of-type(1) {
+    left: 100px;
+    top: 10px;
+    animation: updown1 3s infinite alternate;
+    -webkit-animation: updown1 3s infinite alternate;
+}
+
+.main .content .row-2 .img-wrap:nth-of-type(2) {
+    left: 450px;
+    top: 30px;
+    animation: updown2 3s infinite alternate;
+    -webkit-animation: updown2 3s infinite alternate;
+}
+
+.main .content .row-2 .img-wrap:nth-of-type(3) {
+    left: 800px;
+    top: 30px;
+    animation: updown3 3s infinite alternate;
+    -webkit-animation: updown3 3s infinite alternate;
+}
+.main .content .row-2 .img-wrap:nth-of-type(4) {
+    left: 1200px;
+    top: 20px;
+    animation: updown3 3s infinite alternate;
+    -webkit-animation: updown3 3s infinite alternate;
+}
+.main .content .row-3 .img-wrap:nth-of-type(1) {
+    left: 120px;
+    top: 10px;
+    animation: updown1 3s infinite alternate;
+    -webkit-animation: updown1 3s infinite alternate;
+}
+
+.main .content .row-3 .img-wrap:nth-of-type(2) {
+    left: 450px;
+    top: 30px;
+    animation: updown2 3s infinite alternate;
+    -webkit-animation: updown2 3s infinite alternate;
+}
+
+.main .content .row-3 .img-wrap:nth-of-type(3) {
+    left: 800px;
+    top: 0px;
+    animation: updown3 3s infinite alternate;
+    -webkit-animation: updown3 3s infinite alternate;
+}
+.main .content .row-3 .img-wrap:nth-of-type(4) {
+    left: 1100px;
+    top: 0px;
+    animation: updown3 3s infinite alternate;
+    -webkit-animation: updown3 3s infinite alternate;
+}
+
+
+
+@keyframes updown1 {
+    from {
+        top: 10px;
+    }
+    to {
+        top: 30px;
+    }
+}
+
+@-webkit-keyframes updown1 {
+    from {
+        top: 30px;
+    }
+    to {
+        top: 50px;
+    }
+}
+
+@keyframes updown2 {
+    from {
+        top: 30px;
+    }
+    to {
+        top: 10px;
+    }
+}
+
+@-webkit-keyframes updown2 {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 20px;
+    }
+}
+
+@keyframes updown3 {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 20px;
+    }
+}
+
+@-webkit-keyframes updown3 {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 20px;
+    }
+}

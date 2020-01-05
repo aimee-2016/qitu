@@ -1,1 +1,99 @@
+.banner {
+    padding-top: 258px;
+    height: 968px;
+    background: url('../image/about/banner-bg.png') center no-repeat;
+}
 
+.banner .main {
+    margin: 0 auto;
+    padding-top: 70px;
+    width: 1345px;
+    height: 849px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 40px 0px rgba(171, 178, 168, 0.35);
+    border-radius: 20px;
+}
+
+.banner .main .img {
+    margin-left: -180px;
+    width: 664px;
+    height: 727px;
+    display: inline-block;
+    border-radius:30px;
+    background: gray;
+}
+
+.banner .main article {
+    display: inline-block;
+    padding-top: 30px;
+    margin-left: 186px;
+    width: 614px;
+    color: rgba(87, 87, 87, 1);
+    vertical-align: top;
+    /* line-height: 1; */
+}
+
+.banner .main article h2 {
+    margin-bottom: 28px;
+    font-size: 55px;
+}
+
+.banner .main article p {
+    margin-bottom: 130px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.banner .main article h3 {
+    font-size: 44px;
+}
+
+.banner .main article span {
+    display: block;
+    margin-top: 22px;
+    font-size: 30px;
+}
+.center {
+    margin-top: 250px;
+    padding-right: 80px;
+    color: #333;
+
+}
+.center .left{
+    width: 1068px;
+    height: 1210px;
+    padding: 90px 40px 0 264px;
+    background: url('../image/about/img-1.png') center no-repeat;
+}
+.center .left h4 {
+    font-size:36px;
+    font-weight: bold;
+}
+.center .left p {
+    margin-top: 60px;
+    font-size:30px;
+    line-height: 2;
+    font-family:PingFang SC;
+}
+.center .right{
+    float: right;
+    margin-top: -500px;
+}
+.center .right h4 {
+    font-size:36px;
+    font-weight: bold;
+}
+.center .right p {
+    margin-top: 40px;
+    font-size:30px;
+    font-family:PingFang SC;
+}
+.center .right img {
+    margin-top: 150px;
+}
+.map {
+    text-align: center;
+}
+.map img {
+    width: 100%;
+}
