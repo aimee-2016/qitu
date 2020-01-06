@@ -24,7 +24,7 @@
     </header>
     <div class="natrue">
         <div class="na-back">
-            <img src="./image/nature/natrue_backImg.png" alt=""/>
+            <img src="./image/nature/natrue_backImg.png" alt="" />
             <div class="na-bright">
                 <img src="" alt="" />
             </div>
@@ -33,6 +33,106 @@
             <h3>奇兔氛围</h3>
             <div>
 
+            </div>
+        </div>
+        <div class="news">
+            <h3>奇兔资讯</h3>
+            <div class="tab wrap">
+                <ul id="tab-tilte" class="tab-tilte">
+                    <li class="active item-1"><span>最新</span></li>
+                    <li class="item"><span>标杆</span></li>
+                    <li class="item"><span>重大</span></li>
+                    <li class="item"><span>活动</span></li>
+                    <li class="item"><span>团建</span></li>
+                    <li class="item"><span>慈善</span></li>
+                    <li class="item-last"><span>视频</span></li>
+                </ul>
+                <div class="tab-content" id="tab-content">
+                    <div class="cur">
+                        <div class="display">
+                            <div class="left">
+                                <div>
+                                    <p>18</p>
+                                    <p>12月</p>
+                                    <p>2019年 周三</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p>
+                                    奇兔组建员工团体台球比赛招商部赢得冠军
+                                    ，获得加班奖励！
+                                </p>
+                                <p>
+                                    2019年12月18日星期三，奇兔在今天举办了第一届
+                                    台球大赛，鼓励全体员工参赛。比赛分为三个部门竞赛...
+                                </p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="clearfix">
+                                <div class="left"></div>
+                                <div class="right">
+                                    <div class="title">台球比赛：奇兔组建员工团体台球比赛招商部赢得冠军，获得加班奖励！</div>
+                                    <div class="desc">2019年12月18日星期三，奇兔在今天举办了第一届台球大赛，鼓励全体员工参赛。
+                                        比赛分为三个部门竞赛...</div>
+                                    <div class="author">作者：奇小兔</div>
+                                    <div class="l"><img src="./image/nature/eye-icon.png" alt="eye"><span>7089</span>
+                                    </div>
+                                    <div class="l">2019-12-18 16：00</div>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="left"></div>
+                                <div class="right">
+                                    <div class="title">台球比赛：奇兔组建员工团体台球比赛招商部赢得冠军，获得加班奖励！</div>
+                                    <div class="desc">2019年12月18日星期三，奇兔在今天举办了第一届台球大赛，鼓励全体员工参赛。
+                                        比赛分为三个部门竞赛...</div>
+                                    <div class="author">作者：奇小兔</div>
+                                    <div class="l"><img src="./image/nature/eye-icon.png" alt="eye"><span>7089</span>
+                                    </div>
+                                    <div class="l">2019-12-18 16：00</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="more">
+                            <img src="./image/nature/down-icon.png" alt="down">
+                            <button>阅读更多</button>
+                        </div>
+                    </div>
+                    <div>内容二</div>
+                    <div>内容三</div>
+                    <div>内容四</div>
+                    <div>内容5</div>
+                    <div>内容6</div>
+                    <div>内容7</div>
+                </div>
+            </div>
+        </div>
+        <div class="comments">
+            <h3>奇兔员工留言</h3>
+            <div class="main">
+                <div class="wrap">
+                    <div class="message">
+                        <span></span>
+                        <div>公司很有人情味，氛围好，我希望奇兔能茁壮成长</div>
+                    </div>
+                    <div class="message">
+                        <span></span>
+                        <div>来公司三个月了，我想一直留在这里</div>
+                    </div>
+                    <div class="message">
+                        <span></span>
+                        <div>来公司三个月了，我想一直留在这里</div>
+                    </div>
+                    <div class="message">
+                        <span></span>
+                        <div>公司很有人情味，氛围好，我希望奇兔能茁壮成长</div>
+                    </div>
+                    <div class="message">
+                        <span></span>
+                        <div>来公司三个月了，我想一直留在这里</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -65,5 +165,19 @@
         </div>
     </footer>
 </body>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#tab-tilte li').click(function () {
+            var cur = $(this).index(); //获取当前点击tab标题的索引值
+            tabFun(cur);//调用方法
+        });
+    });
+    function tabFun(cur) {
+        $('#tab-tilte li').eq(cur).addClass('active').siblings().removeClass('active');
+        $('#tab-content div').eq(cur).addClass('cur').siblings().removeClass('cur');
+
+    }
+</script>
 
 </html>
