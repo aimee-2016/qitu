@@ -16,17 +16,17 @@
         <nav class="wrap">
             <a href="./index.html"><img src="./image/home/logo.png" alt="logo"></a>
             <a href="./index.html">首页</a>
-            <a href="./advantage.html">奇兔合伙人</a>
+            <a href="./advantage.html?tab=ad">奇兔合伙人</a>
             <a href="./nature.html">奇兔资讯</a>
             <a href="./about.html">关于我们</a>
-            <a href="./partner.html">工会入口</a>
+            <a href="./advantage.html?tab=partner">工会入口</a>
         </nav>
     </header>
     <div class="float-side">
         <div class="code"></div>
         <p>扫码下载APP</p>
-        <img src="./image/home/an-download.png" alt="苹果下载">
-        <img src="./image/home/apple-download.png" alt="安卓下载">
+        <a href="https://fir.im/54ya"><img src="./image/home/an-download.png" alt="苹果下载"></a>
+        <a href="https://fir.im/kn1s"><img src="./image/home/apple-download.png" alt="安卓下载"></a>
     </div>
     <div class="banner">
     </div>
@@ -186,16 +186,22 @@
                 <span>奇兔精彩 为你而播</span>
                 <div class="code wechat">
                     <img src="./image/home/wechat.png" alt="微信">
+                    <div class="show-box">
+                        <img src="./image/home/service-wechat.jpg" alt="微信客服">
+                    </div>
                 </div>
                 <div class="code qq">
                     <img src="./image/home/qq.png" alt="qq">
+                    <div class="show-box">
+                        <img src="./image/home/service-qq.jpg" alt="qq客服">
+                    </div>
                 </div>
             </div>
             <div class="row-2">
                 <a href="./about.html">联系我们</a>
                 <a href="./nature.html">奇兔文化</a>
-                <a href="./partner.html">公会入驻</a>
-                <a href="./advantage.html">平台优势</a>
+                <a href="./advantage.html?tab=partner">公会入驻</a>
+                <a href="./advantage.html?tab=ad">平台优势</a>
                 <a href="">联系电话：400-0020215</a>
             </div>
             <div class="row-3">奇兔秀娱 版权所有 2009-2024 皖ICP备B2-20190130</div>
@@ -206,18 +212,30 @@
 
     <script type="text/javascript">
         $(function(){
+            if(window.location.href.split('=')[1] == 'ab') {
+                ad()
+            } else if(window.location.href.split('=')[1] == 'partner') {
+                partner()
+            }
             $('#partner').click(function() {
-                $(this).parent().children().removeClass('selected')
-                $(this).addClass("selected")
-                $('.ad').css('display','none')
-                $('.partner').css('display','block')
+                partner()
             })
+            
             $('#advantage').click(function() {
-                $(this).parent().children().removeClass('selected')
-                $(this).addClass("selected")
+                ad()
+            })
+            function ad() {
+                $('#advantage').parent().children().removeClass('selected')
+                $('#advantage').addClass("selected")
                 $('.ad').css('display','block')
                 $('.partner').css('display','none')
-            })
+            }
+            function partner() {
+                $('#partner').parent().children().removeClass('selected')
+                $('#partner').addClass("selected")
+                $('.ad').css('display','none')
+                $('.partner').css('display','block')
+            }
         });
     </script>
 </body>

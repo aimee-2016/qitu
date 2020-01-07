@@ -14,13 +14,13 @@
     border-radius: 20px;
 }
 
-.banner .main .img {
+.banner .main img {
     margin-left: -180px;
-    width: 664px;
+    /* width: 664px;
     height: 727px;
     display: inline-block;
     border-radius:30px;
-    background: gray;
+    background: gray; */
 }
 
 .banner .main article {

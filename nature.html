@@ -16,18 +16,21 @@
         <nav class="wrap">
             <a href="./index.html"><img src="./image/home/logo.png" alt="logo"></a>
             <a href="./index.html">首页</a>
-            <a href="./advantage.html">奇兔合伙人</a>
+            <a href="./advantage.html?tab=ad">奇兔合伙人</a>
             <a href="./nature.html">奇兔资讯</a>
             <a href="./about.html">关于我们</a>
-            <a href="./partner.html">工会入口</a>
+            <a href="./advantage.html?tab=partner">工会入口</a>
         </nav>
     </header>
+    <div class="float-side">
+        <div class="code"></div>
+        <p>扫码下载APP</p>
+        <a href="https://fir.im/54ya"><img src="./image/home/an-download.png" alt="苹果下载"></a>
+        <a href="https://fir.im/kn1s"><img src="./image/home/apple-download.png" alt="安卓下载"></a>
+    </div>
     <div class="natrue">
         <div class="na-back">
-            <img src="./image/nature/natrue_backImg.png" alt="" />
-            <div class="na-bright">
-                <img src="" alt="" />
-            </div>
+            <img src="./image/nature/news-banner.png" alt="nature" />
         </div>
         <div class="na-carousel">
             <h3>奇兔氛围</h3>
@@ -73,7 +76,7 @@
                     <li class="item-last"><span>视频</span></li>
                 </ul>
                 <div class="tab-content" id="tab-content">
-                    <div class="cur">
+                    <div class="cur pane">
                         <div class="display">
                             <div class="left">
                                 <div>
@@ -95,7 +98,7 @@
                         </div>
                         <ul>
                             <li class="clearfix">
-                                <div class="left"></div>
+                                <img src="./image/nature/news-1.png" alt="图片">
                                 <div class="right">
                                     <div class="title">台球比赛：奇兔组建员工团体台球比赛招商部赢得冠军，获得加班奖励！</div>
                                     <div class="desc">2019年12月18日星期三，奇兔在今天举办了第一届台球大赛，鼓励全体员工参赛。
@@ -107,7 +110,7 @@
                                 </div>
                             </li>
                             <li class="clearfix">
-                                <div class="left"></div>
+                                <img src="./image/nature/news-1.png" alt="图片">
                                 <div class="right">
                                     <div class="title">台球比赛：奇兔组建员工团体台球比赛招商部赢得冠军，获得加班奖励！</div>
                                     <div class="desc">2019年12月18日星期三，奇兔在今天举办了第一届台球大赛，鼓励全体员工参赛。
@@ -124,12 +127,12 @@
                             <button>阅读更多</button>
                         </div>
                     </div>
-                    <div>内容二</div>
-                    <div>内容三</div>
-                    <div>内容四</div>
-                    <div>内容5</div>
-                    <div>内容6</div>
-                    <div>内容7</div>
+                    <div class="pane">内容二</div>
+                    <div class="pane">内容三</div>
+                    <div class="pane">内容四</div>
+                    <div class="pane">内容5</div>
+                    <div class="pane">内容6</div>
+                    <div class="pane">内容7</div>
                 </div>
             </div>
         </div>
@@ -161,12 +164,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="float-side">
-        <div class="code"></div>
-        <p>扫码下载APP</p>
-        <img src="./image/home/an-download.png" alt="苹果下载">
-        <img src="./image/home/apple-download.png" alt="安卓下载">
-    </div> -->
     <footer>
         <div class="wrap">
             <div class="row-1">
@@ -174,16 +171,22 @@
                 <span>奇兔精彩 为你而播</span>
                 <div class="code wechat">
                     <img src="./image/home/wechat.png" alt="微信">
+                    <div class="show-box">
+                        <img src="./image/home/service-wechat.jpg" alt="微信客服">
+                    </div>
                 </div>
                 <div class="code qq">
                     <img src="./image/home/qq.png" alt="qq">
+                    <div class="show-box">
+                        <img src="./image/home/service-qq.jpg" alt="qq客服">
+                    </div>
                 </div>
             </div>
             <div class="row-2">
                 <a href="./about.html">联系我们</a>
                 <a href="./nature.html">奇兔文化</a>
-                <a href="./partner.html">公会入驻</a>
-                <a href="./advantage.html">平台优势</a>
+                <a href="./advantage.html?tab=partner">公会入驻</a>
+                <a href="./advantage.html?tab=ad">平台优势</a>
                 <a href="">联系电话：400-0020215</a>
             </div>
             <div class="row-3">奇兔秀娱 版权所有 2009-2024 皖ICP备B2-20190130</div>
@@ -221,8 +224,7 @@
     });
     function tabFun(cur) {
         $('#tab-tilte li').eq(cur).addClass('active').siblings().removeClass('active');
-        $('#tab-content div').eq(cur).addClass('cur').siblings().removeClass('cur');
-
+        $('#tab-content .pane').eq(cur).addClass('cur').siblings().removeClass('cur');
     }
 </script>
 </html>
