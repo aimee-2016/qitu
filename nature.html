@@ -24,24 +24,49 @@
     </header>
     <div class="natrue">
         <div class="na-back">
-            <img src="./image/nature/natrue_backImg.png" alt=""/>
+            <img src="./image/nature/natrue_backImg.png" alt="" />
             <div class="na-bright">
                 <img src="" alt="" />
             </div>
         </div>
         <div class="na-carousel">
             <h3>奇兔氛围</h3>
-            <div>
-
+            <div class="auth-carousel">
+                <div class="carousel-box" onclick="authBox('left', 0)">
+                </div>
+                <div class="carousel-content">
+                    <div id="auth" class="auth-box" style="width:1970px">
+                        <div class="demo-carousel">
+                            <img src="./image/partner/partner-row-5.png">
+                        </div>
+                        <div class="demo-carousel">
+                            <img src="./image/partner/partner-row-5.png">
+                        </div>
+                        <div class="demo-carousel">
+                            <img src="./image/partner/partner-row-5.png">
+                        </div>
+                        <div class="demo-carousel">
+                            <img src="./image/partner/partner-row-5.png">
+                        </div>
+                        <div class="demo-carousel">
+                            <img src="./image/partner/partner-row-5.png">
+                        </div>
+                        <div class="demo-carousel">
+                            <img src="./image/partner/partner-row-5.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-box2" onclick="authBox('right', 0)">
+                </div>
             </div>
         </div>
     </div>
-    <div class="float-side">
+    <!-- <div class="float-side">
         <div class="code"></div>
         <p>扫码下载APP</p>
         <img src="./image/home/an-download.png" alt="苹果下载">
         <img src="./image/home/apple-download.png" alt="安卓下载">
-    </div>
+    </div> -->
     <footer>
         <div class="wrap">
             <div class="row-1">
@@ -65,5 +90,130 @@
         </div>
     </footer>
 </body>
+<script type="text/javascript">
+    function authBox(direction, index) {
+            let width = document.getElementsByClassName('auth-carousel')[0].clientWidth;
+            let countWidth = document.getElementsByClassName('carousel-content')[0].clientWidth;
+            let dom = document.getElementById('auth')
+            if (direction === 'left') {
+                if (countWidth > width) {
+                    countWidth = 0;
+                } else {
+                    countWidth -= countWidth;
+                }
+            } else {
+                if (countWidth > width) {
+                    countWidth = 0;
+                } else {
+                    countWidth = 1367;
+                }
+            }
+            dom.style.marginLeft = '-' + countWidth + 'px';
+        }
+</script>
 
 </html>
+<style>
+.auth-box {
+    transition: all ease-in-out 0.3s;
+}
+ .auth-carousel{
+  position: relative;
+}
+ .auth-carousel .carousel-box {
+  width: 78px;
+  height: 78px;
+  background-color: rgba(153, 153, 153, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  left: 120px;
+  top: 127px;
+  z-index: 3;
+  transition: all ease-in-out 0.2s;
+}
+
+ .auth-carousel .carousel-box:hover {
+  background-color: rgb(90, 90, 90);
+}
+
+ .auth-carousel .carousel-box::before {
+  content: "";
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  position: absolute;
+  top: 30%;
+  left: 39%;
+  width: 30px;
+  height: 30px;
+  transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+}
+
+ .auth-carousel .carousel-box2 {
+  width: 78px;
+  height: 78px;
+  background-color: rgba(153, 153, 153, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  right: 120px;
+  top: 113px;
+  z-index: 3;
+  transition: all ease-in-out 0.2s;
+}
+
+ .auth-carousel .carousel-box2:hover {
+  background-color: rgb(90, 90, 90);
+}
+
+ .auth-carousel .carousel-box2::before {
+  content: "";
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  position: absolute;
+  top: 30%;
+  left: 27%;
+  width: 30px;
+  height: 30px;
+  transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+}
+ .auth-carousel .carousel-content:hover .auth .auth-carousel .carousel-box2{
+  background-color: rgb(90, 90, 90);
+}
+ .auth-carousel .carousel-content {
+  max-width: 1367px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+ .auth-carousel .demo-carousel {
+  background-color: #fff;
+  box-shadow: 0px 2px 8px 0px rgba(95, 95, 95, 0.25);
+  width: 250px;
+  height: 310px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+ .auth-carousel .demo-carousel .dc-shadow .dc-img image{
+  width: 100%;
+  height: 100%;
+}
+ .auth-carousel .demo-carousel>img {
+  width: inherit;
+  height: inherit;
+}
+
+</style>
