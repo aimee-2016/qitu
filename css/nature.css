@@ -3,41 +3,49 @@
     margin: 0 auto;
 }
 
-.natrue h3 {
+/* .natrue h3 {
     margin: 100px 0 60px 0;
     color: #333333;
     font-family: 'PingFang-SC-Heavy', 'Microsoft YaHei';
     font-weight: bold;
     font-size: 36px;
     text-align: center;
+} */
+.headline {
+    padding: 80px 0 30px 0;
+    text-align: center;
 }
 
+.headline h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+}
+
+.headline span {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(51, 51, 51, 1);
+}
 .na-back {
-    /* width: 100%;
-    max-width: 1920px;
-    margin: 0 auto; */
     height: 800px;
     position: relative;
-    background: url('../image/nature/natrue_backImg.png') center no-repeat;
+    background: url('../image/nature/natrue_backImg.jpg') center no-repeat;
+    text-align: right;
+}
+
+.na-back .wrap {
+    padding-top: 330px;
 }
 
 .na-back img {
-    /* width: inherit;
-    height: 800px; */
-}
-
-.na-back img {
-    position: absolute;
-    right: 34px;
-    /* width: 589px;
-    height: 648px;
-    border-radius: 26px;
-    border: 1px solid #333333; */
-    top: 320px;
+    width: 500px;
+    margin-right: -240px;
 }
 
 .natrue .na-carousel {
-    margin-top: 200px;
+    /* margin-top: 200px; */
 }
 
 .tab-tilte {
@@ -46,17 +54,17 @@
 .tab-tilte li {
     display: inline-block;
     height: 100px;
-    width: 180px;
+    width: 140px;
     position: relative;
     text-align: center;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .tab-tilte .item::before {
     content: '';
     display: inline-block;
-    width: 180px;
+    width: 140px;
     height: 100px;
     transform: skewX(-30deg);
     background-color: #F9EBFE
@@ -65,9 +73,9 @@
 .tab-tilte li span {
     position: absolute;
     z-index: 2;
-    top: 30px;
-    left: 60px;
-    font-size: 30px;
+    top: 36px;
+    left: 50px;
+    font-size: 24px;
     color: #666666;
     line-height: 1
 }
@@ -75,6 +83,7 @@
 .tab-tilte .item-1 {
     position: relative;
     width: 100px;
+    margin-right: 0;
 }
 
 .tab-tilte .item-1::before {
@@ -85,14 +94,14 @@
     transform: skewX(-30deg);
     background-color: #F9EBFE;
     position: absolute;
-    left: 0;
+    left: -30px;
     top: 0
 }
 
 .tab-tilte .item-1::after {
     content: '';
     display: inline-block;
-    width: 150px;
+    width: 100px;
     height: 100px;
     border-radius: 50px 0 0 50px;
     background-color: #F9EBFE;
@@ -124,13 +133,13 @@
 .tab-tilte .item-last::after {
     content: '';
     display: inline-block;
-    width: 150px;
+    width: 100px;
     height: 100px;
     border-radius: 0 50px 50px 0;
     background-color: #F9EBFE;
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 70px;
 }
 
 .tab-tilte .item-last {
@@ -155,25 +164,25 @@
 }
 
 .tab-content .display {
-    height: 330px;
+    height: 260px;
     background: url('../image/nature/date-bg.png') no-repeat center;
     padding: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .tab-content .display .left {
     float: left;
     position: relative;
-    height: 250px;
-    width: 190px;
+    height: 204px;
+    width: 172px;
 }
 
 .tab-content .display .left::after {
     content: '';
     position: absolute;
     top: 0;
-    height: 250px;
-    width: 190px;
+    height: 206px;
+    width: 172px;
     border-radius: 50%;
     background: #fff;
     opacity: 0.53;
@@ -181,7 +190,7 @@
 
 .tab-content .display .left div {
     width: 100%;
-    padding-top: 30px;
+    padding-top: 20px;
     position: absolute;
     z-index: 2;
     text-align: center;
@@ -189,17 +198,17 @@
 }
 
 .tab-content .display .left div p:nth-of-type(1) {
-    font-size: 67px;
+    font-size: 58px;
     font-weight: bold;
 }
 
 .tab-content .display .left div p:nth-of-type(2) {
-    margin: 10px 0;
-    font-size: 35px;
+    margin: 8px 0;
+    font-size: 30px;
 }
 
 .tab-content .display .left div p:nth-of-type(3) {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .tab-content .display .right {
@@ -207,16 +216,21 @@
     width: 600px;
     float: left;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     font-family: PingFang SC;
 }
 
 .tab-content .display .right p {
     margin-bottom: 20px;
 }
+.tab-content .display .right div {
+    display: inline-block;
+    width: 360px;
+    background: #9677FF;
+}
 
 .tab-content ul li {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding: 20px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 16px 0px rgba(159, 116, 248, 0.2);
@@ -228,7 +242,7 @@
 }
 
 .tab-content ul li .right {
-    font-size: 24px;
+    font-size: 20px;
     color: #333;
     float: left;
     width: 900px;
@@ -237,7 +251,7 @@
 }
 
 .tab-content ul li .right .l {
-    font-size: 18px;
+    font-size: 16px;
     color: #999999;
 }
 
@@ -261,7 +275,7 @@
     background: none;
 }
 .comments {
-    padding: 0 0 20px 0;
+    padding: 0 0 100px 0;
 }
 .comments h3{
    margin-bottom: 100px;
@@ -271,10 +285,10 @@
     background: url('../image/nature/message-bg.png') center no-repeat;
 }
 .comments .message {
-    margin-bottom: 110px;
+    margin-bottom: 90px;
 }
 .comments .wrap >div:nth-of-type(2) {
-    margin-left: 800px;
+    margin-left: 700px;
 }
 .comments .wrap >div:nth-of-type(3) {
     margin-left: 500px;
@@ -287,12 +301,12 @@
 }
 .comments .message span {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin-right: 10px;
     background: rgba(101, 223, 213, 1);
     border-radius: 50%;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 .comments .message div {
@@ -301,7 +315,7 @@
     padding: 10px 20px;
     background: rgba(131, 126, 255, 1);
     border-radius: 4px;
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
 }
 .comments .message div::before {

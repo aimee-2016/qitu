@@ -17,23 +17,30 @@
             <a href="./index.html"><img src="./image/home/logo.png" alt="logo"></a>
             <a href="./index.html">首页</a>
             <a href="./advantage.html?tab=ad">奇兔合伙人</a>
-            <a href="./nature.html">奇兔资讯</a>
+            <a href="./nature.html" class="selected">奇兔资讯</a>
             <a href="./about.html">关于我们</a>
             <a href="./advantage.html?tab=partner">工会入口</a>
         </nav>
     </header>
     <div class="float-side">
-        <div class="code"></div>
-        <p>扫码下载APP</p>
-        <a href="https://fir.im/54ya"><img src="./image/home/an-download.png" alt="苹果下载"></a>
-        <a href="https://fir.im/kn1s"><img src="./image/home/apple-download.png" alt="安卓下载"></a>
+        <div class="main">
+            <div class="code"></div>
+            <p>扫码下载APP</p>
+            <a href="https://fir.im/54ya"><img src="./image/home/an-download.png" alt="苹果下载"></a>
+            <a href="https://fir.im/kn1s"><img src="./image/home/apple-download.png" alt="安卓下载"></a>
+        </div>
     </div>
     <div class="natrue">
         <div class="na-back">
-            <img src="./image/nature/news-banner.png" alt="nature" />
+            <div class="wrap">
+                <img src="./image/nature/news-banner.png" alt="nature" />
+            </div>
         </div>
         <div class="na-carousel">
-            <h3>奇兔氛围</h3>
+            <div class="headline">
+                <h2>奇兔氛围</h2>
+                <span>Qitu Atmosphere</span>
+            </div>
             <div class="auth-carousel">
                 <div class="carousel-box" onclick="authBox('left', 0)">
                 </div>
@@ -64,11 +71,15 @@
             </div>
         </div>
         <div class="news">
-            <h3>奇兔资讯</h3>
+            <div class="headline">
+                <h2>奇兔资讯</h2>
+                <span>Qitu Information
+                </span>
+            </div>
             <div class="tab wrap">
                 <ul id="tab-tilte" class="tab-tilte">
                     <li class="active item-1"><span>最新</span></li>
-                    <li class="item"><span>标杆</span></li>
+                    <li class="item" style="margin-left: -10px;"><span>标杆</span></li>
                     <li class="item"><span>重大</span></li>
                     <li class="item"><span>活动</span></li>
                     <li class="item"><span>团建</span></li>
@@ -94,6 +105,7 @@
                                     2019年12月18日星期三，奇兔在今天举办了第一届
                                     台球大赛，鼓励全体员工参赛。比赛分为三个部门竞赛...
                                 </p>
+                                <div></div>
                             </div>
                         </div>
                         <ul>
@@ -137,7 +149,10 @@
             </div>
         </div>
         <div class="comments">
-            <h3>奇兔员工留言</h3>
+            <div class="headline">
+                <h2>奇兔员工留言</h2>
+                <span>QituLeave a message</span>
+            </div>
             <div class="main">
                 <div class="wrap">
                     <div class="message">
@@ -172,13 +187,13 @@
                 <div class="code wechat">
                     <img src="./image/home/wechat.png" alt="微信">
                     <div class="show-box">
-                        <img src="./image/home/service-wechat.jpg" alt="微信客服">
+                        <img src="./image/home/service-wechat.png" alt="微信客服">
                     </div>
                 </div>
                 <div class="code qq">
                     <img src="./image/home/qq.png" alt="qq">
                     <div class="show-box">
-                        <img src="./image/home/service-qq.jpg" alt="qq客服">
+                        <img src="./image/home/service-qq.png" alt="qq客服">
                     </div>
                 </div>
             </div>
@@ -195,24 +210,24 @@
 </body>
 <script type="text/javascript">
     function authBox(direction, index) {
-            let width = document.getElementsByClassName('auth-carousel')[0].clientWidth;
-            let countWidth = document.getElementsByClassName('carousel-content')[0].clientWidth;
-            let dom = document.getElementById('auth')
-            if (direction === 'left') {
-                if (countWidth > width) {
-                    countWidth = 0;
-                } else {
-                    countWidth -= countWidth;
-                }
+        let width = document.getElementsByClassName('auth-carousel')[0].clientWidth;
+        let countWidth = document.getElementsByClassName('carousel-content')[0].clientWidth;
+        let dom = document.getElementById('auth')
+        if (direction === 'left') {
+            if (countWidth > width) {
+                countWidth = 0;
             } else {
-                if (countWidth > width) {
-                    countWidth = 0;
-                } else {
-                    countWidth = 1367;
-                }
+                countWidth -= countWidth;
             }
-            dom.style.marginLeft = '-' + countWidth + 'px';
+        } else {
+            if (countWidth > width) {
+                countWidth = 0;
+            } else {
+                countWidth = 1367;
+            }
         }
+        dom.style.marginLeft = '-' + countWidth + 'px';
+    }
 </script>
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
@@ -227,107 +242,114 @@
         $('#tab-content .pane').eq(cur).addClass('cur').siblings().removeClass('cur');
     }
 </script>
+
 </html>
 <style>
-.auth-box {
-    transition: all ease-in-out 0.3s;
-}
- .auth-carousel{
-  position: relative;
-}
- .auth-carousel .carousel-box {
-  width: 78px;
-  height: 78px;
-  background-color: rgba(153, 153, 153, 0.2);
-  border-radius: 50%;
-  position: absolute;
-  cursor: pointer;
-  display: inline-block;
-  left: 120px;
-  top: 127px;
-  z-index: 3;
-  transition: all ease-in-out 0.2s;
-}
+    .auth-box {
+        transition: all ease-in-out 0.3s;
+    }
 
- .auth-carousel .carousel-box:hover {
-  background-color: rgb(90, 90, 90);
-}
+    .auth-carousel {
+        position: relative;
+    }
 
- .auth-carousel .carousel-box::before {
-  content: "";
-  border-right: 5px solid #fff;
-  border-bottom: 5px solid #fff;
-  position: absolute;
-  top: 30%;
-  left: 39%;
-  width: 30px;
-  height: 30px;
-  transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-}
+    .auth-carousel .carousel-box {
+        width: 78px;
+        height: 78px;
+        background-color: rgba(153, 153, 153, 0.2);
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        left: 120px;
+        top: 127px;
+        z-index: 3;
+        transition: all ease-in-out 0.2s;
+    }
 
- .auth-carousel .carousel-box2 {
-  width: 78px;
-  height: 78px;
-  background-color: rgba(153, 153, 153, 0.2);
-  border-radius: 50%;
-  position: absolute;
-  cursor: pointer;
-  display: inline-block;
-  right: 120px;
-  top: 113px;
-  z-index: 3;
-  transition: all ease-in-out 0.2s;
-}
+    .auth-carousel .carousel-box:hover {
+        background-color: rgb(90, 90, 90);
+    }
 
- .auth-carousel .carousel-box2:hover {
-  background-color: rgb(90, 90, 90);
-}
+    .auth-carousel .carousel-box::before {
+        content: "";
+        border-right: 5px solid #fff;
+        border-bottom: 5px solid #fff;
+        position: absolute;
+        top: 30%;
+        left: 39%;
+        width: 30px;
+        height: 30px;
+        transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+    }
 
- .auth-carousel .carousel-box2::before {
-  content: "";
-  border-right: 5px solid #fff;
-  border-bottom: 5px solid #fff;
-  position: absolute;
-  top: 30%;
-  left: 27%;
-  width: 30px;
-  height: 30px;
-  transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-}
- .auth-carousel .carousel-content:hover .auth .auth-carousel .carousel-box2{
-  background-color: rgb(90, 90, 90);
-}
- .auth-carousel .carousel-content {
-  max-width: 1367px;
-  overflow: hidden;
-  padding: 20px;
-  margin: 0 auto;
-}
+    .auth-carousel .carousel-box2 {
+        width: 78px;
+        height: 78px;
+        background-color: rgba(153, 153, 153, 0.2);
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        right: 120px;
+        top: 113px;
+        z-index: 3;
+        transition: all ease-in-out 0.2s;
+    }
 
- .auth-carousel .demo-carousel {
-  background-color: #fff;
-  box-shadow: 0px 2px 8px 0px rgba(95, 95, 95, 0.25);
-  width: 250px;
-  height: 310px;
-  position: relative;
-  float: left;
-  margin-right: 20px;
-  border-radius: 10px;
-}
- .auth-carousel .demo-carousel .dc-shadow .dc-img image{
-  width: 100%;
-  height: 100%;
-}
- .auth-carousel .demo-carousel>img {
-  width: inherit;
-  height: inherit;
-}
+    .auth-carousel .carousel-box2:hover {
+        background-color: rgb(90, 90, 90);
+    }
+
+    .auth-carousel .carousel-box2::before {
+        content: "";
+        border-right: 5px solid #fff;
+        border-bottom: 5px solid #fff;
+        position: absolute;
+        top: 30%;
+        left: 27%;
+        width: 30px;
+        height: 30px;
+        transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+    }
+
+    .auth-carousel .carousel-content:hover .auth .auth-carousel .carousel-box2 {
+        background-color: rgb(90, 90, 90);
+    }
+
+    .auth-carousel .carousel-content {
+        max-width: 1367px;
+        overflow: hidden;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .auth-carousel .demo-carousel {
+        background-color: #fff;
+        box-shadow: 0px 2px 8px 0px rgba(95, 95, 95, 0.25);
+        width: 250px;
+        height: 310px;
+        position: relative;
+        float: left;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+
+    .auth-carousel .demo-carousel .dc-shadow .dc-img image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .auth-carousel .demo-carousel>img {
+        width: inherit;
+        height: inherit;
+    }
 </style>

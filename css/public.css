@@ -1,7 +1,7 @@
 /* 公共样式库 */
 
 .wrap {
-    width: 1400px;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -26,20 +26,24 @@
 
 .float-side {
     position: fixed;
-    top: 100px;
+    top: 300px;
     right: 0;
     z-index: 20;
-    width: 183px;
-    height: 369px;
-    padding: 66px 30px 0 38px;
+    width: 132px;
+    height: 248px;
+    padding: 48px 0 0 30px;
     background: url('../image/home/float-side.png') no-repeat;
     color: #fff;
     text-align: center;
 }
 
+.float-side .main {
+    width: 80px;
+    font-size: 0
+}
 .float-side .code {
-    width: 115px;
-    height: 115px;
+    width: 80px;
+    height: 80px;
     background: rgba(255, 255, 255, 1);
     border: 3px solid rgba(255, 255, 135, 1);
     box-shadow: 10px 13px 16px 0px rgba(149, 98, 255, 0.43);
@@ -47,14 +51,15 @@
 }
 
 .float-side p {
-    margin: 12px 0 6px 0;
-    font-size: 18px;
+    margin: 5px 0;
+    margin-top: 5px;
+    font-size: 12px;
     font-family: PingFang SC;
     font-weight: 500;
 }
 
 .float-side img {
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 header {
@@ -66,12 +71,26 @@ header {
 }
 
 header nav a {
-    margin-right: 150px;
-    font-size: 20px;
+    margin-right: 120px;
+    font-size: 18px;
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     vertical-align: middle;
-    text-decoration: none
+    text-decoration: none;
+    position: relative;
+}
+header nav .selected {
+    font-size: 20px;
+    font-weight: bold;
+}
+header nav .selected::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    border-top: solid 1px #fff;
 }
 
 header nav a:last-child {
@@ -105,20 +124,16 @@ footer .row-1 .wechat {
 }
 
 footer .row-1 .code .show-box {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    background-color:#fff; 
     display: none;
     position: absolute;
-    top: -106px;
-    left: -25px;
+    top: -174px;
+    left: -50px;
     border-radius: 6px;
 }
 
-footer .row-1 .code .show-box img {
+/* footer .row-1 .code .show-box img {
     width: 100%;
-}
+} */
 
 footer .row-1 .code>img:hover+.show-box {
     display: block;
@@ -129,8 +144,8 @@ footer .row-2 {
 }
 
 footer .row-2 a {
-    margin-right: 181px;
-    font-size: 24px;
+    margin-right: 170px;
+    font-size: 18px;
     color: #fff;
 }
 
