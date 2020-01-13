@@ -16,10 +16,10 @@
         <nav class="wrap">
             <a href="./index.html"><img src="./image/home/logo.png" alt="logo"></a>
             <a href="./index.html">首页</a>
-            <a href="./advantage.html?tab=ad" class="selected">奇兔合伙人</a>
+            <a href="./advantage.html?tab=ad" id="ad-nav">奇兔合伙人</a>
             <a href="./nature.html">奇兔资讯</a>
             <a href="./about.html">关于我们</a>
-            <a href="./advantage.html?tab=partner">工会入口</a>
+            <a href="./advantage.html?tab=partner" id="partner-nav">工会入口</a>
         </nav>
     </header>
     <div class="float-side">
@@ -39,62 +39,56 @@
         <span id="partner">公会入驻</span>
         <span class="selected" id="advantage">平台优势</span>
     </div>
-    <div class="ad">
+    <div class="ad" id="ad-c">
         <div class="content">
-            <div class="row-1">
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-1.png" alt="日返">
-                    <p>日返</p>
-                </div>
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-2.png" alt="返点高">
-                    <p>返点高</p>
-                </div>
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-3.png" alt="服务好">
-                    <p>服务好</p>
-                </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-1.png" alt="日返">
+                <p>日返</p>
             </div>
-            <div class="row-2">
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-4.png" alt="24小时在线">
-                    <p>24小时在线</p>
-                </div>
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-5.png" alt="技术团队">
-                    <p>技术团队</p>
-                </div>
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-6.png" alt="帮扶创业">
-                    <p>帮扶创业</p>
-                </div>
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-7.png" alt="资质齐全">
-                    <p>资质齐全</p>
-                </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-2.png" alt="返点高">
+                <p>返点高</p>
             </div>
-            <div class="row-3">
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-8.png" alt="自主研发">
-                    <p>自主研发</p>
-                </div>
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-9.png" alt="专业培训团队">
-                    <p>专业培训团队</p>
-                </div>
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-10.png" alt="专业律师团队">
-                    <p>专业律师团队</p>
-                </div>
-                <div class="img-wrap">
-                    <img src="./image/advantage/ad-11.png" alt="专业售后团队">
-                    <p>专业售后团队</p>
-                </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-3.png" alt="服务好">
+                <p>服务好</p>
+            </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-4.png" alt="24小时在线">
+                <p>24小时在线</p>
+            </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-5.png" alt="技术团队">
+                <p>技术团队</p>
+            </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-6.png" alt="帮扶创业">
+                <p>帮扶创业</p>
+            </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-7.png" alt="资质齐全">
+                <p>资质齐全</p>
+            </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-8.png" alt="自主研发">
+                <p>自主研发</p>
+            </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-9.png" alt="专业培训团队">
+                <p>专业培训团队</p>
+            </div>
+            <div class="img-wrap">
+                <img src="./image/advantage/ad-10.png" alt="专业律师团队">
+                <p>专业律师团队</p>
+            </div>
+            <div class="img-wrap  circle1">
+                <img src="./image/advantage/ad-11.png" alt="专业售后团队">
+                <p>专业售后团队</p>
             </div>
         </div>
     </div>
-    <div class="partner">
-        <div class="wrap">
+    <div class="partner" id="partner-c">
+        <div class="wrap-1300">
             <div class="row-1 clearfix">
                 <div class="left">
                     <img src="./image/partner/partner-row-1.png" alt="">
@@ -223,10 +217,11 @@
 
     <script type="text/javascript">
         $(function () {
-            if (window.location.href.split('=')[1] == 'ab') {
-                ad()
-            } else if (window.location.href.split('=')[1] == 'partner') {
+            // 头部导航与tab选中效果
+            if (window.location.href.split('=')[1] == 'partner') {
                 partner()
+            } else if (window.location.href.split('=')[1] == 'ad') {
+                ad()
             }
             $('#partner').click(function () {
                 partner()
@@ -238,14 +233,22 @@
             function ad() {
                 $('#advantage').parent().children().removeClass('selected')
                 $('#advantage').addClass("selected")
-                $('.ad').css('display', 'block')
-                $('.partner').css('display', 'none')
+
+                $('#ad-c').css('display', 'block')
+                $('#partner-c').css('display', 'none')
+
+                $('#ad-nav').addClass("selected")
+                $('#partner-nav').removeClass("selected")
             }
             function partner() {
                 $('#partner').parent().children().removeClass('selected')
                 $('#partner').addClass("selected")
-                $('.ad').css('display', 'none')
-                $('.partner').css('display', 'block')
+
+                $('#ad-c').css('display', 'none')
+                $('#partner-c').css('display', 'block')
+
+                $('#partner-nav').addClass("selected")
+                $('#ad-nav').removeClass("selected")
             }
         });
     </script>

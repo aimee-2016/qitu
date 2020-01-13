@@ -43,6 +43,10 @@ body {
 .video-bg .btns a:hover,.video-bg .btns .selected {
     background: linear-gradient(90deg, rgba(102, 74, 244, 1), rgba(186, 90, 250, 1));
     border: none;
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transition: all .5s;
 }
 
 .video-bg .btns a:last-child {

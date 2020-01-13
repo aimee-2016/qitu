@@ -41,27 +41,21 @@
 }
 
 .ad .content {
-    height: 980px;
+    position: relative;
+    width: 1300px;
+    height: 920px;
+    margin: 0 auto;
     margin-top: 44px;
     /* padding-top: 174px; */
     background: url('../image/advantage/ad-bg.png') center no-repeat;
 }
 
-.ad .content>div {
-    position: relative;
-    height: 340px;
-}
-
-.ad .content>.row-2 {
-    position: relative;
-    height: 320px;
-}
 
 .ad .content .img-wrap {
     position: absolute;
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     padding-top: 24px;
     background: rgba(255, 255, 255, 1);
     border-radius: 50%;
@@ -71,8 +65,8 @@
 }
 
 .ad .content .img-wrap p {
-    margin-top: 30px;
-    font-size: 24px;
+    margin-top: 20px;
+    font-size: 16px;
     font-family: PingFang SC;
 }
 
@@ -84,83 +78,91 @@
     -webkit-animation: none; */
 }
 
-.ad .content .row-1 .img-wrap:nth-of-type(1) {
-    left: 340px;
+.ad .content .img-wrap:nth-of-type(1) {
+    left: 270px;
     top: 100px;
     /* animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate; */
 }
 
-.ad .content .row-1 .img-wrap:nth-of-type(2) {
-    left: 550px;
-    top: 130px;
+.ad .content .img-wrap:nth-of-type(2) {
+    left: 480px;
+    top: 115px;
      /* animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate; */
 }
 
-.ad .content .row-1 .img-wrap:nth-of-type(3) {
-    left: 900px;
-    top: 100px;
+.ad .content .img-wrap:nth-of-type(3) {
+    left: 680px;
+    top: 110px;
     /* animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate; */
 }
 
-.ad .content .row-2 .img-wrap:nth-of-type(1) {
-    left: 200px;
-    top: 10px;
+.ad .content .img-wrap:nth-of-type(4) {
+    left: 148px;
+    top: 325px;
     /* animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate; */
 }
 
-.ad .content .row-2 .img-wrap:nth-of-type(2) {
-    left: 450px;
-    top: 30px;
+.ad .content .img-wrap:nth-of-type(5) {
+    left: 360px;
+    top: 390px;
     /* animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate; */
 }
-
-.ad .content .row-2 .img-wrap:nth-of-type(3) {
-    left: 800px;
-    top: 30px;
+.ad .content .img-wrap:nth-of-type(6) {
+    left: 577px;
+    top: 340px;
     /* animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate; */
 }
 
-.ad .content .row-2 .img-wrap:nth-of-type(4) {
-    left: 1000px;
-    top: 20px;
+.ad .content .img-wrap:nth-of-type(7) {
+    left: 802px;
+    top: 296px;
     /* animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate; */
 }
 
-.ad .content .row-3 .img-wrap:nth-of-type(1) {
-    left: 220px;
-    top: 10px;
+.ad .content .img-wrap:nth-of-type(8) {
+    left: 172px;
+    top: 566px;
+    /* animation: updown3 3s infinite alternate;
+    -webkit-animation: updown3 3s infinite alternate; */
+}
+
+.ad .content .img-wrap:nth-of-type(9) {
+    left: 366px;
+    top: 638px;
     /* animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate; */
 }
 
-.ad .content .row-3 .img-wrap:nth-of-type(2) {
-    left: 450px;
-    top: 30px;
+.ad .content .img-wrap:nth-of-type(10) {
+    left: 582px;
+    top: 574px;
     /* animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate; */
 }
 
-.ad .content .row-3 .img-wrap:nth-of-type(3) {
+.ad .content .img-wrap:nth-of-type(11) {
     left: 800px;
-    top: -40px;
+    top: 527px;
     /* animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate; */
 }
 
-.ad .content .row-3 .img-wrap:nth-of-type(4) {
-    left: 1100px;
-    top: -40px;
-    /* animation: updown3 3s infinite alternate;
-    -webkit-animation: updown3 3s infinite alternate; */
-}
 
+/* .ad .circle1 {
+    animation: updown1 3s infinite alternate;
+    -webkit-animation: updown1 3s infinite alternate;
+}
+.ad .circle1:hover {
+    animation: updown11 0s;
+    -webkit-animation: updown11 .5s;
+} */
 
 
 @keyframes updown1 {
@@ -169,9 +171,10 @@
     }
 
     to {
-        top: 30px;
+        top: -40px;
     }
 }
+
 
 @-webkit-keyframes updown1 {
     from {
@@ -182,7 +185,24 @@
         top: 50px;
     }
 }
+@keyframes updown11 {
+    from {
+        top: -40px;
+    }
 
+    to {
+        top: -40px;
+    }
+}
+@-webkit-keyframes updown11 {
+    from {
+        top: -40px;
+    }
+
+    to {
+        top: -40px;
+    }
+}
 @keyframes updown2 {
     from {
         top: 30px;
@@ -248,42 +268,42 @@
 
 .partner .row-1 .right {
     width: 223px;
-    margin-top: 212px;
-    margin-right: 100px;
+    margin: 212px 200px 0 0;
 }
 
 .partner .row-1 .left>div {
-    margin-left: 180px;
-    margin-top: -100px;
+    margin: -100px 0 0 180px
 }
 
 .partner .row-2 .left {
     width: 436px;
-    margin-top: 110px;
-    margin-left: 180px;
+    margin: 110px 0 0 180px;
 }
 
-.partner .row-2 .right {
-    margin-right: -160px;
+.partner .row-2 .right img{
+    /* margin-right: -60px; */
+    width: 620px;
 }
 
+.partner .row-3 {
+    width: 1100px;
+    margin: 0 auto;
+}
 .partner .row-3 .right {
     width: 368px;
     margin-top: 80px;
 }
 
 .partner .b {
-    width: 1300px;
-    margin: 0 auto;
-    height: 1200px;
+    /* width: 1300px;
+    margin: 0 auto; */
+    height: 1160px;
     background: url('../image/partner/partner-row-4.png') bottom right no-repeat;
 }
 
 .partner .row-4 .left {
     width: 385px;
-    padding-top: 250px;
-    margin-bottom: 210px;
-    margin-left: 100px;
+    margin: 250px 0 210px 100px;
 }
 
 .partner .row-5 {
@@ -292,8 +312,7 @@
 
 .partner .row-5 .right {
     float: left;
-    margin-left: 60px;
-    padding-top: 40px;
+    margin: 40px 0 0 60px;
     width: 490px;
     font-size: 12px;
 }
@@ -301,8 +320,6 @@
 .partner .row-5 .right p {
     font-size: 12px;
 }
-
-.partner .row-5 {}
 
 .partner .left {
     float: left;
@@ -322,7 +339,7 @@
     line-height: 1.5;
 }
 
-.w540 {
+/* .w540 {
     width: 540px;
 }
 
@@ -364,4 +381,4 @@
 
 .mt120 {
     margin-top: 120px;
-}
+} */
