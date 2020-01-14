@@ -71,43 +71,36 @@
             </div>
         </div> -->
         <div class="lunbotu">
-            <div class="wrap">
+            <div class="wrap" id="overview-wrap">
                 <div class="arrow-left" id="arrow-left">
                     <img src="./image/nature/arrow-left.png">
                 </div>
                 <div class="overview">
                     <div class="content-box" id="carousel">
-                            <!-- https://blog.csdn.net/changeie/article/details/79660540 -->
-                        <!-- <div class="item-carousel">
-                            <img src="./image/partner/partner-row-5.png">
-                        </div> -->
-                        <div class="item-carousel">
+                        <div class="item-carousel">1
                             <img src="./image/partner/partner-row-1.png">
                         </div>
-                        <div class="item-carousel">
+                        <div class="item-carousel">2
                             <img src="./image/partner/partner-row-2.png">
                         </div>
-                        <div class="item-carousel">
+                        <div class="item-carousel">3
                             <img src="./image/partner/partner-row-3.png">
                         </div>
-                        <div class="item-carousel">
+                        <div class="item-carousel">4
+                            <img src="./image/partner/partner-row-4.png">
+                        </div>
+                        <div class="item-carousel">5
                             <img src="./image/partner/partner-row-5.png">
                         </div>
-                        <div class="item-carousel">
+                        <div class="item-carousel">6
                             <img src="./image/partner/partner-row-1.png">
                         </div>
-                        <div class="item-carousel">
+                        <div class="item-carousel">7
                             <img src="./image/partner/partner-row-2.png">
                         </div>
-                        <div class="item-carousel">
+                        <div class="item-carousel">8
                             <img src="./image/partner/partner-row-3.png">
                         </div>
-                        <div class="item-carousel">
-                            <img src="./image/partner/partner-row-5.png">
-                        </div>
-                        <!-- <div class="item-carousel">
-                            <img src="./image/partner/partner-row-1.png">
-                        </div> -->
                     </div>
                 </div>
                 <div class="arrow-right" id="arrow-right">
@@ -293,12 +286,31 @@
         arrowLeft = $('#arrow-left'),
         arrowRight = $('#arrow-right'),
         indicators = $('#dot i')
+    carouselWrap = $('#overview-wrap');
     var childrenNum = Math.ceil($('#carousel div').length / 5)
+    console.log(childrenNum)
     var carouselWidth = 1200, count = 1, timer = null;
 
     for (var i = 0; i < childrenNum; i++) {
         $('#dot').append('<i>' + i + '</i>')
     }
+    // 如果最后一页不是五张，添加空的div,满足5张
+    var lastNum = $('#carousel div').length % 5
+    if (lastNum) {
+        for (var q = 0; q < 5 - lastNum; q++) {
+            $('#carousel').append('<div class="item-carousel">' + (q + 20) + '</div>')
+        }
+    }
+    // 前面添加后五张图片，后面添加前五张图片，实现无缝连接
+    // $('#carousel').append($('#carousel').find('div:lt(5)').clone());
+    // console.log($('#carousel').html())
+    
+    var gnIndex = $('#carousel div').length-5
+    var beforeDom5 = $('#carousel').find('div:gt('+(gnIndex-1)+')').clone()
+    var afterDom5 = $('#carousel').find('div:lt(5)').clone()
+    $('#carousel').append(afterDom5)
+    $('#carousel').prepend(beforeDom5)
+    console.log($('#carousel'))
     // console.log(childrenNum)
     $('#carousel').css('width', childrenNum * 1200 + 'px')
     //设置左右箭头的点击事件
@@ -314,7 +326,7 @@
     indicators.click(function () {
         count = $(this).index()
         setIndicatorStyle()
-        carousel.finish().animate({ left: -carouselWidth * count }, 500)
+        carousel.finish().animate({ left: -carouselWidth * count }, 3000)
     })
 
     // 设置指示器样式
@@ -322,23 +334,25 @@
         indicators.eq(count - 1).addClass('active').siblings().removeClass('active')
     }
     // interval()
-    // 鼠标移入  暂停 自动轮播
-    carouselWrap
-        .mouseover(function () {
-            clearInterval(timer)
-        })
-        .mouseout(interval)   // 鼠标移开 记录轮播
+    // // 鼠标移入  暂停 自动轮播
+    // carouselWrap
+    //     .mouseover(function () {
+    //         clearInterval(timer)
+    //     })
+    //     .mouseout(interval)   // 鼠标移开 记录轮播
     // 动画 主函数
     function move(flag) {
-        console.log(carouselWidth * count)
-
+        // console.log('flag:' + flag)
+        // console.log('count:' + count)
+        // console.log("carouselWidth:" + carouselWidth)
+        // 右边
         if (!flag) {
             count++
             l = -carouselWidth * count
             if (count === childrenNum - 1) {
                 carousel.finish().animate({
                     left: l
-                }, 500, function () {
+                }, 3000, function () {
                     count = 1
                     setIndicatorStyle()
 
@@ -348,15 +362,16 @@
                 setIndicatorStyle()
                 carousel.finish().animate({
                     left: l
-                }, 500)
+                }, 3000)
             }
         } else {
+            // 左边
             count--
             l = -carouselWidth * count
             if (count === 0) {
                 carousel.finish().animate({
                     left: l
-                }, 500, function () {
+                }, 3000, function () {
                     count = childrenNum - 2
                     setIndicatorStyle()
                     $(this).css('left', -carouselWidth * count)
@@ -365,14 +380,14 @@
                 setIndicatorStyle()
                 carousel.finish().animate({
                     left: l
-                }, 500)
+                }, 3000)
             }
         }
     }
     // 自动轮播
-    // function interval() {
-    //     timer = setInterval(move, 2000)
-    // }
+    function interval() {
+        timer = setInterval(move, 2000)
+    }
 
 
 
