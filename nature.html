@@ -32,44 +32,8 @@
     </div>
     <div class="natrue">
         <div class="na-back">
-            <div class="wrap">
-                <img src="./image/nature/news-banner.png" alt="nature" />
-            </div>
+            <img src="./image/nature/news-banner.png" alt="nature" />
         </div>
-        <!-- <div class="na-carousel">
-            <div class="headline">
-                <h2>奇兔氛围</h2>
-                <span>Qitu Atmosphere</span>
-            </div>
-            <div class="auth-carousel">
-                <div class="carousel-box" onclick="authBox('left', 0)">
-                </div>
-                <div class="carousel-content">
-                    <div id="auth" class="auth-box" style="width:1970px">
-                        <div class="demo-carousel">
-                            <img src="./image/partner/partner-row-5.png">
-                        </div>
-                        <div class="demo-carousel">
-                            <img src="./image/partner/partner-row-5.png">
-                        </div>
-                        <div class="demo-carousel">
-                            <img src="./image/partner/partner-row-5.png">
-                        </div>
-                        <div class="demo-carousel">
-                            <img src="./image/partner/partner-row-5.png">
-                        </div>
-                        <div class="demo-carousel">
-                            <img src="./image/partner/partner-row-5.png">
-                        </div>
-                        <div class="demo-carousel">
-                            <img src="./image/partner/partner-row-5.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-box2" onclick="authBox('right', 0)">
-                </div>
-            </div>
-        </div> -->
         <div class="lunbotu">
             <div class="wrap" id="overview-wrap">
                 <div class="arrow-left" id="arrow-left">
@@ -77,28 +41,49 @@
                 </div>
                 <div class="overview">
                     <div class="content-box" id="carousel">
-                        <div class="item-carousel">1
+                        <div class="item-carousel">
                             <img src="./image/partner/partner-row-1.png">
                         </div>
-                        <div class="item-carousel">2
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-1.png">
+                        </div>
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-1.png">
+                        </div>
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-1.png">
+                        </div>
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-1.png">
+                        </div>
+                        <div class="item-carousel">
                             <img src="./image/partner/partner-row-2.png">
                         </div>
-                        <div class="item-carousel">3
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-2.png">
+                        </div>
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-2.png">
+                        </div>
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-2.png">
+                        </div>
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-2.png">
+                        </div>
+                        <div class="item-carousel">
                             <img src="./image/partner/partner-row-3.png">
                         </div>
-                        <div class="item-carousel">4
-                            <img src="./image/partner/partner-row-4.png">
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-3.png">
                         </div>
-                        <div class="item-carousel">5
-                            <img src="./image/partner/partner-row-5.png">
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-3.png">
                         </div>
-                        <div class="item-carousel">6
-                            <img src="./image/partner/partner-row-1.png">
+                        <div class="item-carousel">
+                            <img src="./image/partner/partner-row-3.png">
                         </div>
-                        <div class="item-carousel">7
-                            <img src="./image/partner/partner-row-2.png">
-                        </div>
-                        <div class="item-carousel">8
+                        <div class="item-carousel">
                             <img src="./image/partner/partner-row-3.png">
                         </div>
                     </div>
@@ -248,27 +233,6 @@
         </div>
     </footer>
 </body>
-<!-- <script type="text/javascript">
-    function authBox(direction, index) {
-        let width = document.getElementsByClassName('auth-carousel')[0].clientWidth;
-        let countWidth = document.getElementsByClassName('carousel-content')[0].clientWidth;
-        let dom = document.getElementById('auth')
-        if (direction === 'left') {
-            if (countWidth > width) {
-                countWidth = 0;
-            } else {
-                countWidth -= countWidth;
-            }
-        } else {
-            if (countWidth > width) {
-                countWidth = 0;
-            } else {
-                countWidth = 1367;
-            }
-        }
-        dom.style.marginLeft = '-' + countWidth + 'px';
-    }
-</script> -->
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
     $('#tab-tilte li').click(function () {
@@ -285,240 +249,105 @@
     var carousel = $('#carousel'),
         arrowLeft = $('#arrow-left'),
         arrowRight = $('#arrow-right'),
-        indicators = $('#dot i')
-    carouselWrap = $('#overview-wrap');
-    var childrenNum = Math.ceil($('#carousel div').length / 5)
-    console.log(childrenNum)
-    var carouselWidth = 1200, count = 1, timer = null;
+        carouselWrap = $('#overview-wrap');
+    var childrenNum = Math.ceil($('#carousel div').length / 5);
+    var carouselWidth = 1200, count = 0, timer = null;
 
     for (var i = 0; i < childrenNum; i++) {
-        $('#dot').append('<i>' + i + '</i>')
+        $('#dot').append('<i></i>')
     }
-    // 如果最后一页不是五张，添加空的div,满足5张
-    var lastNum = $('#carousel div').length % 5
-    if (lastNum) {
-        for (var q = 0; q < 5 - lastNum; q++) {
-            $('#carousel').append('<div class="item-carousel">' + (q + 20) + '</div>')
-        }
-    }
-    // 前面添加后五张图片，后面添加前五张图片，实现无缝连接
-    // $('#carousel').append($('#carousel').find('div:lt(5)').clone());
-    // console.log($('#carousel').html())
-    
-    var gnIndex = $('#carousel div').length-5
-    var beforeDom5 = $('#carousel').find('div:gt('+(gnIndex-1)+')').clone()
-    var afterDom5 = $('#carousel').find('div:lt(5)').clone()
-    $('#carousel').append(afterDom5)
-    $('#carousel').prepend(beforeDom5)
-    console.log($('#carousel'))
-    // console.log(childrenNum)
+    var indicators = $('#dot i')
+    setIndicatorStyle()
     $('#carousel').css('width', childrenNum * 1200 + 'px')
+    if (childrenNum > 1) {
+        interval()
+    }
     //设置左右箭头的点击事件
     arrowLeft.click(function (e) {
         e.preventDefault()
-        move(true)
+        if (childrenNum > 1) {
+            move(true)
+        }
     })
     arrowRight.click(function (e) {
         e.preventDefault()
-        move()
+        if (childrenNum > 1) {
+            move()
+        }
     })
     // 指示器
     indicators.click(function () {
         count = $(this).index()
         setIndicatorStyle()
-        carousel.finish().animate({ left: -carouselWidth * count }, 3000)
+        if (childrenNum > 1) {
+            carousel.finish().animate({ left: -carouselWidth * count }, 500)
+        }
     })
 
     // 设置指示器样式
     function setIndicatorStyle() {
-        indicators.eq(count - 1).addClass('active').siblings().removeClass('active')
+        indicators.eq(count).addClass('active').siblings().removeClass('active')
     }
-    // interval()
+
     // // 鼠标移入  暂停 自动轮播
-    // carouselWrap
-    //     .mouseover(function () {
-    //         clearInterval(timer)
-    //     })
-    //     .mouseout(interval)   // 鼠标移开 记录轮播
+    carouselWrap
+        .mouseover(function () {
+            clearInterval(timer)
+        })
+        .mouseout(function () {
+            if (childrenNum > 1) {
+                interval()
+            }
+        })   // 鼠标移开 记录轮播
     // 动画 主函数
     function move(flag) {
-        // console.log('flag:' + flag)
-        // console.log('count:' + count)
-        // console.log("carouselWidth:" + carouselWidth)
         // 右边
         if (!flag) {
             count++
             l = -carouselWidth * count
-            if (count === childrenNum - 1) {
+            if (count === childrenNum) {
                 carousel.finish().animate({
-                    left: l
-                }, 3000, function () {
-                    count = 1
+                    left: 0
+                }, 0, function () {
+                    count = 0
                     setIndicatorStyle()
-
-                    $(this).css('left', -carouselWidth * count)
+                    $(this).css('left', 0)
+                    $(this).fadeOut(0)
+                    $(this).fadeIn(500)
                 })
             } else {
                 setIndicatorStyle()
                 carousel.finish().animate({
                     left: l
-                }, 3000)
+                }, 500)
             }
         } else {
             // 左边
             count--
             l = -carouselWidth * count
-            if (count === 0) {
+            if (count === -1) {
                 carousel.finish().animate({
-                    left: l
-                }, 3000, function () {
-                    count = childrenNum - 2
+                    left: 0
+                }, 0, function () {
+                    count = childrenNum - 1
                     setIndicatorStyle()
                     $(this).css('left', -carouselWidth * count)
+                    $(this).fadeOut(0)
+                    $(this).fadeIn(500)
                 })
             } else {
                 setIndicatorStyle()
                 carousel.finish().animate({
                     left: l
-                }, 3000)
+                }, 500)
             }
         }
     }
     // 自动轮播
     function interval() {
-        timer = setInterval(move, 2000)
+        timer = setInterval(move, 3000)
     }
-
-
-
-
-
-    // var dotIndex = 0
-    // $('#dot i').eq(dotIndex).addClass('cur')
-    // setInterval(function () {
-    //     dotIndex++
-    //     if (dotIndex < childrenNum) {
-    //         $('#carousel').css('left', -dotIndex * 1200 + 'px')
-    //         // console.log(dotIndex)
-    //         $('#dot i').eq(dotIndex).addClass('cur').siblings().removeClass('cur')
-    //     }
-    // }, 3000);
-    // $('#arrow-right').click(function () {
-    //     arrowSlide('left', dotIndex, childrenNum)
-    // });
-
-
-
-
 </script>
 
 </html>
-<style>
-    .auth-box {
-        transition: all ease-in-out 0.3s;
-    }
-
-    .auth-carousel {
-        position: relative;
-    }
-
-    .auth-carousel .carousel-box {
-        width: 78px;
-        height: 78px;
-        background-color: rgba(153, 153, 153, 0.2);
-        border-radius: 50%;
-        position: absolute;
-        cursor: pointer;
-        display: inline-block;
-        left: 120px;
-        top: 127px;
-        z-index: 3;
-        transition: all ease-in-out 0.2s;
-    }
-
-    .auth-carousel .carousel-box:hover {
-        background-color: rgb(90, 90, 90);
-    }
-
-    .auth-carousel .carousel-box::before {
-        content: "";
-        border-right: 5px solid #fff;
-        border-bottom: 5px solid #fff;
-        position: absolute;
-        top: 30%;
-        left: 39%;
-        width: 30px;
-        height: 30px;
-        transform: rotate(135deg);
-        -o-transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-        -moz-transform: rotate(135deg);
-        -ms-transform: rotate(135deg);
-    }
-
-    .auth-carousel .carousel-box2 {
-        width: 78px;
-        height: 78px;
-        background-color: rgba(153, 153, 153, 0.2);
-        border-radius: 50%;
-        position: absolute;
-        cursor: pointer;
-        display: inline-block;
-        right: 120px;
-        top: 113px;
-        z-index: 3;
-        transition: all ease-in-out 0.2s;
-    }
-
-    .auth-carousel .carousel-box2:hover {
-        background-color: rgb(90, 90, 90);
-    }
-
-    .auth-carousel .carousel-box2::before {
-        content: "";
-        border-right: 5px solid #fff;
-        border-bottom: 5px solid #fff;
-        position: absolute;
-        top: 30%;
-        left: 27%;
-        width: 30px;
-        height: 30px;
-        transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-    }
-
-    .auth-carousel .carousel-content:hover .auth .auth-carousel .carousel-box2 {
-        background-color: rgb(90, 90, 90);
-    }
-
-    .auth-carousel .carousel-content {
-        max-width: 1367px;
-        overflow: hidden;
-        padding: 20px;
-        margin: 0 auto;
-    }
-
-    .auth-carousel .demo-carousel {
-        background-color: #fff;
-        box-shadow: 0px 2px 8px 0px rgba(95, 95, 95, 0.25);
-        width: 250px;
-        height: 310px;
-        position: relative;
-        float: left;
-        margin-right: 20px;
-        border-radius: 10px;
-    }
-
-    .auth-carousel .demo-carousel .dc-shadow .dc-img image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .auth-carousel .demo-carousel>img {
-        width: inherit;
-        height: inherit;
-    }
-</style>
+    

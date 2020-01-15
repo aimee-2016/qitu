@@ -103,7 +103,7 @@ header nav a:last-child {
 footer {
     height: 686px;
     padding-top: 325px;
-    background: url('../image/home/footer-bg.png') center no-repeat;
+    background: url('../image/home/footer-bg.png') bottom center no-repeat;
     color: #fff;
 }
 
