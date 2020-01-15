@@ -59,5 +59,8 @@ input:focus, select:focus, textarea:focus {
 div, ul, li, header, footer, a {
 	box-sizing: border-box;
 }
+button{
+	outline: none;
+}
 
 /* 样式重置结束 */

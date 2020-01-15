@@ -141,135 +141,41 @@
 }
 
 .tab-content>div {
-    padding-top: 40px;
+    padding-top: 80px;
     display: none;
 }
 
 .tab-content>div.cur {
     display: block;
 }
-
-.tab-content .display {
-    height: 260px;
-    background: url('../image/nature/date-bg.png') no-repeat center;
-    padding: 30px;
-    margin-bottom: 30px;
+.pane {
+    padding: 0 10px;
 }
-
-.tab-content .display .left {
-    float: left;
-    position: relative;
-    height: 204px;
-    width: 172px;
+.pane h3{
+    font-size:30px;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
 }
-
-.tab-content .display .left::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 206px;
-    width: 172px;
-    border-radius: 50%;
-    background: #fff;
-    opacity: 0.53;
+.pane .l {
+    margin: 40px 0 20px 0;
+    color: #999999;
+    font-size: 20px;
 }
-
-.tab-content .display .left div {
-    width: 100%;
-    padding-top: 20px;
-    position: absolute;
-    z-index: 2;
-    text-align: center;
-    color: #fff;
-}
-
-.tab-content .display .left div p:nth-of-type(1) {
-    font-size: 58px;
-    font-weight: bold;
-}
-
-.tab-content .display .left div p:nth-of-type(2) {
-    margin: 8px 0;
-    font-size: 30px;
-}
-
-.tab-content .display .left div p:nth-of-type(3) {
+.pane .l span{
     font-size: 16px;
 }
-
-.tab-content .display .right {
-    margin-left: 60px;
-    width: 600px;
-    float: left;
-    color: #fff;
-    font-size: 20px;
-    font-family: PingFang SC;
+.pane .l img {
+    margin-left: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
 }
-
-.tab-content .display .right p {
+.pane p {
+    font-size:24px;
+    line-height: 2;
+    color:rgba(51,51,51,1);
     margin-bottom: 20px;
 }
-.tab-content .display .right div {
-    display: inline-block;
-    width: 360px;
-    background: #9677FF;
-}
-
-.tab-content ul li {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 16px 0px rgba(159, 116, 248, 0.2);
-    border-radius: 10px;
-}
-
-.tab-content ul li img {
-    float: left;
-}
-
-.tab-content ul li .right {
-    font-size: 20px;
-    color: #333;
-    float: left;
-    width: 900px;
-    margin-left: 20px;
-    line-height: 2
-}
-
-.tab-content ul li .right .l {
-    font-size: 16px;
-    color: #999999;
-}
-
-.tab-content .more {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.tab-content .more button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 220px;
-    height: 50px;
-    border: 2px solid rgba(117, 61, 232, 1);
-    border-radius: 25px;
-    font-size: 20px;
-    font-family: PingFang SC;
-    font-weight: 500;
-    color: rgba(117, 61, 232, 1);
-    background: none;
-}
-.tab-content .page .content  {
-    margin-top: 10px;
-    float: right;
-    font-size: 0;
-}
-.tab-content .page .content  span {
-    font-size: 20px;
-    color: #747474;
-    margin-right: 26px;
-}
-.tab-content .page .content  span.active {
-    color: #753DE8;
+.pane >img {
+    width: 340px;
+    margin-right: 36px;
 }
