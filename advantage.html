@@ -16,7 +16,7 @@
         <nav class="wrap">
             <a href="./index.html"><img src="./image/home/logo.png" alt="logo"></a>
             <a href="./index.html">首页</a>
-            <a href="./advantage.html?tab=ad" id="ad-nav">奇兔合伙人</a>
+            <a href="./advantage.html?tab=advantage" id="advantage-nav">奇兔合伙人</a>
             <a href="./nature.html">奇兔资讯</a>
             <a href="./about.html">关于我们</a>
             <a href="./advantage.html?tab=partner" id="partner-nav">工会入口</a>
@@ -39,7 +39,7 @@
         <span id="partner">公会入驻</span>
         <span class="selected" id="advantage">平台优势</span>
     </div>
-    <div class="ad" id="ad-c">
+    <div class="advantage" id="advantage-c">
         <div class="content">
             <div class="img-wrap">
                 <img src="./image/advantage/ad-1.png" alt="日返">
@@ -206,7 +206,7 @@
                 <a href="./about.html">联系我们</a>
                 <a href="./nature.html">奇兔文化</a>
                 <a href="./advantage.html?tab=partner">公会入驻</a>
-                <a href="./advantage.html?tab=ad">平台优势</a>
+                <a href="./advantage.html?tab=advantage">平台优势</a>
                 <a href="">联系电话：400-0020215</a>
             </div>
             <div class="row-3">奇兔秀娱 版权所有 2009-2024 皖ICP备B2-20190130</div>
@@ -220,35 +220,35 @@
             // 头部导航与tab选中效果
             if (window.location.href.split('=')[1] == 'partner') {
                 partner()
-            } else if (window.location.href.split('=')[1] == 'ad') {
-                ad()
+            } else if (window.location.href.split('=')[1] == 'advantage') {
+                adf()
             }
             $('#partner').click(function () {
                 partner()
             })
 
             $('#advantage').click(function () {
-                ad()
+                adf()
             })
-            function ad() {
+            function adf() {
                 $('#advantage').parent().children().removeClass('selected')
                 $('#advantage').addClass("selected")
 
-                $('#ad-c').css('display', 'block')
+                $('#advantage-c').css('display', 'block')
                 $('#partner-c').css('display', 'none')
 
-                $('#ad-nav').addClass("selected")
+                $('#advantage-nav').addClass("selected")
                 $('#partner-nav').removeClass("selected")
             }
             function partner() {
                 $('#partner').parent().children().removeClass('selected')
                 $('#partner').addClass("selected")
 
-                $('#ad-c').css('display', 'none')
+                $('#advantage-c').css('display', 'none')
                 $('#partner-c').css('display', 'block')
 
                 $('#partner-nav').addClass("selected")
-                $('#ad-nav').removeClass("selected")
+                $('#advantage-nav').removeClass("selected")
             }
         });
     </script>

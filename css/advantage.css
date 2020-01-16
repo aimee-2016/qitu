@@ -9,7 +9,7 @@
 }
 
 
-.ad {
+.advantage {
     padding-top: 40px;
 }
 
@@ -40,18 +40,18 @@
     color: #fff;
 }
 
-.ad .content {
+.advantage .content {
     position: relative;
     width: 1300px;
     height: 920px;
     margin: 0 auto;
     margin-top: 44px;
     /* padding-top: 174px; */
-    background: url('../image/advantage/ad-bg.png') center no-repeat;
+    background: url('../image/advantage/advantage-bg.png') center no-repeat;
 }
 
 
-.ad .content .img-wrap {
+.advantage .content .img-wrap {
     position: absolute;
     display: inline-block;
     width: 180px;
@@ -64,13 +64,13 @@
     color: #333;
 }
 
-.ad .content .img-wrap p {
+.advantage .content .img-wrap p {
     margin-top: 20px;
     font-size: 16px;
     font-family: PingFang SC;
 }
 
-.ad .content .img-wrap:hover {
+.advantage .content .img-wrap:hover {
     background: rgba(133, 74, 255, 1);
     box-shadow: 0px 4px 27px 0px rgba(117, 61, 232, 0.43);
     color: #fff;
@@ -78,76 +78,76 @@
     -webkit-animation: none; */
 }
 
-.ad .content .img-wrap:nth-of-type(1) {
+.advantage .content .img-wrap:nth-of-type(1) {
     left: 270px;
     top: 100px;
     /* animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(2) {
+.advantage .content .img-wrap:nth-of-type(2) {
     left: 480px;
     top: 115px;
      /* animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(3) {
+.advantage .content .img-wrap:nth-of-type(3) {
     left: 680px;
     top: 110px;
     /* animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(4) {
+.advantage .content .img-wrap:nth-of-type(4) {
     left: 148px;
     top: 325px;
     /* animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(5) {
+.advantage .content .img-wrap:nth-of-type(5) {
     left: 360px;
     top: 390px;
     /* animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate; */
 }
-.ad .content .img-wrap:nth-of-type(6) {
+.advantage .content .img-wrap:nth-of-type(6) {
     left: 577px;
     top: 340px;
     /* animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(7) {
+.advantage .content .img-wrap:nth-of-type(7) {
     left: 802px;
     top: 296px;
     /* animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(8) {
+.advantage .content .img-wrap:nth-of-type(8) {
     left: 172px;
     top: 566px;
     /* animation: updown3 3s infinite alternate;
     -webkit-animation: updown3 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(9) {
+.advantage .content .img-wrap:nth-of-type(9) {
     left: 366px;
     top: 638px;
     /* animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(10) {
+.advantage .content .img-wrap:nth-of-type(10) {
     left: 582px;
     top: 574px;
     /* animation: updown2 3s infinite alternate;
     -webkit-animation: updown2 3s infinite alternate; */
 }
 
-.ad .content .img-wrap:nth-of-type(11) {
+.advantage .content .img-wrap:nth-of-type(11) {
     left: 800px;
     top: 527px;
     /* animation: updown3 3s infinite alternate;
@@ -155,11 +155,11 @@
 }
 
 
-/* .ad .circle1 {
+/* .advantage .circle1 {
     animation: updown1 3s infinite alternate;
     -webkit-animation: updown1 3s infinite alternate;
 }
-.ad .circle1:hover {
+.advantage .circle1:hover {
     animation: updown11 0s;
     -webkit-animation: updown11 .5s;
 } */

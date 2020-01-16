@@ -152,21 +152,22 @@
 .tab-content .display {
     height: 260px;
     background: url('../image/nature/date-bg.png') no-repeat center;
-    padding: 30px;
+    
     margin-bottom: 30px;
 }
 
 .tab-content .display .left {
+    padding: 30px;
     float: left;
     position: relative;
-    height: 204px;
-    width: 172px;
+    height: 264px;
+    width: 232px;
 }
 
 .tab-content .display .left::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 30px;
     height: 206px;
     width: 172px;
     border-radius: 50%;
@@ -175,7 +176,7 @@
 }
 
 .tab-content .display .left div {
-    width: 100%;
+    width: 172px;
     padding-top: 20px;
     position: absolute;
     z-index: 2;
@@ -197,25 +198,33 @@
     font-size: 16px;
 }
 
-.tab-content .display .right {
-    margin-left: 60px;
-    width: 600px;
+.tab-content .display .center {
+    box-sizing: content-box;
+    padding: 30px;
+    /* margin-left: 60px; */
+    width: 520px;
     float: left;
     color: #fff;
     font-size: 20px;
     font-family: PingFang SC;
 }
 
-.tab-content .display .right p {
+.tab-content .display .center p {
     margin-bottom: 20px;
 }
-.tab-content .display .right div {
+.tab-content .display .center div {
     display: inline-block;
     width: 360px;
     background: #9677FF;
 }
-
-.tab-content ul li {
+.tab-content .display .right {
+    width: 360px;
+    height: 260px;
+    background: #9677FF;
+    float: right;
+}
+.tab-content .list a {
+    display: block;
     margin-bottom: 30px;
     padding: 20px;
     background: rgba(255, 255, 255, 1);
@@ -223,11 +232,11 @@
     border-radius: 10px;
 }
 
-.tab-content ul li img {
+.tab-content .list a img {
     float: left;
 }
 
-.tab-content ul li .right {
+.tab-content .list a .right {
     font-size: 20px;
     color: #333;
     float: left;
@@ -236,7 +245,7 @@
     line-height: 2
 }
 
-.tab-content ul li .right .l {
+.tab-content .list a .right .l {
     font-size: 16px;
     color: #999999;
 }
