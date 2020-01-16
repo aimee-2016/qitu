@@ -104,9 +104,17 @@ header nav a:last-child {
 footer {
     min-width: 1200px;
     height: 686px;
-    padding-top: 325px;
-    background: url('../image/home/footer-bg.png') bottom center no-repeat;
+    /* padding-top: 325px; */
+    /* background: url('../image/home/footer-bg.png') bottom center no-repeat; */
     color: #fff;
+    position: relative;
+}
+footer .main {
+    /* margin-top: -486px; */
+    /* position: absolute;
+    top: 360px;
+    height: 326px;
+    background: rgba(117, 60, 229, 0.8); */
 }
 
 footer .row-1 img {
@@ -162,6 +170,119 @@ footer .row-3 {
     margin-top: 86px;
     font-size: 18px;
     text-align: center;
+}
+
+/* footer {
+    height: 401px;
+    margin-top: 50px
+} */
+
+footer .wave {
+    width: auto;
+    overflow: hidden;
+    bottom: -20px;
+    position: relative;
+}
+footer .wave::after {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    bottom: -360px;
+    background: rgba(117, 60, 229, 0.8);
+}
+
+footer .wave .foot_bg_1 {
+    margin-bottom: -18px;
+    animation-name: two;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: two;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite
+}
+
+footer .wave .foot_bg_2 {
+    margin-top: -318px;
+    animation-name: one;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: one;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite
+}
+
+
+@keyframes one {
+    0% {
+        margin-left: -20px
+    }
+
+    50% {
+        margin-left: -500px
+    }
+
+    100% {
+        margin-left: -20px
+    }
+}
+
+@keyframes two {
+    0% {
+        margin-left: -20px
+    }
+
+    30% {
+        margin-left: -100px
+    }
+
+    60% {
+        margin-left: -600px
+    }
+
+    100% {
+        margin-left: -20px
+    }
+}
+
+@-webkit-keyframes one {
+    0% {
+        margin-left: -20px
+    }
+
+    30% {
+        margin-left: -500px
+    }
+
+    60% {
+        margin-left: -200px
+    }
+
+    80% {
+        margin-left: -300px
+    }
+
+    100% {
+        margin-left: -100px
+    }
+}
+
+@-webkit-keyframes two {
+    0% {
+        margin-left: -20px
+    }
+
+    30% {
+        margin-left: -100px
+    }
+
+    60% {
+        margin-left: -600px
+    }
+
+    100% {
+        margin-left: -20px
+    }
 }
 
 /* 头部底部浮层样式结束 */

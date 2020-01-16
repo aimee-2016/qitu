@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        footer {
+            height: 401px;
+            margin-top: 50px
+        }
+
+        footer .wave {
+            width: auto;
+            overflow: hidden;
+            bottom: -20px
+        }
+
+        footer .wave .foot_bg_1 {
+            margin-bottom: -18px;
+            animation-name: two;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: two;
+            -webkit-animation-duration: 10s;
+            -webkit-animation-iteration-count: infinite
+        }
+
+        footer .wave .foot_bg_2 {
+            margin-top: -318px;
+            animation-name: one;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: one;
+            -webkit-animation-duration: 10s;
+            -webkit-animation-iteration-count: infinite
+        }
+
+        @keyframes one {
+            0% {
+                margin-left: -20px
+            }
+
+            50% {
+                margin-left: -500px
+            }
+
+            100% {
+                margin-left: -20px
+            }
+        }
+
+        @keyframes two {
+            0% {
+                margin-left: -20px
+            }
+
+            30% {
+                margin-left: -100px
+            }
+
+            60% {
+                margin-left: -600px
+            }
+
+            100% {
+                margin-left: -20px
+            }
+        }
+
+        @-webkit-keyframes one {
+            0% {
+                margin-left: -20px
+            }
+
+            30% {
+                margin-left: -500px
+            }
+
+            60% {
+                margin-left: -200px
+            }
+
+            80% {
+                margin-left: -300px
+            }
+
+            100% {
+                margin-left: -100px
+            }
+        }
+
+        @-webkit-keyframes two {
+            0% {
+                margin-left: -20px
+            }
+
+            30% {
+                margin-left: -100px
+            }
+
+            60% {
+                margin-left: -600px
+            }
+
+            100% {
+                margin-left: -20px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="wave">
+            <svg class="foot_bg_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="3163px" height="341px">
+                <path fill-rule="evenodd" opacity="0.302" fill="#753ce5"
+                    d="M-0.000,402.000 L-0.000,79.000 C36.342,71.767 315.719,19.001 462.135,5.146 C694.149,-16.810 800.206,50.217 964.000,48.000 C1131.675,45.732 1150.368,5.778 1393.000,2.000 C1604.960,-1.301 1665.817,57.348 1958.000,39.000 C2263.398,21.746 2450.856,58.896 2634.000,98.000 C2893.733,153.457 3124.126,118.727 3163.000,129.000 L3163.000,402.000 L-0.000,402.000 Z" />
+            </svg>
+            <svg class="foot_bg_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="3163px" height="341px">
+                <path fill-rule="evenodd" opacity="0.802" fill="#753ce5"
+                    d="M3163.000,418.000 L-0.000,418.000 L-0.000,59.000 C167.461,-0.158 294.843,-11.939 549.000,11.000 C684.564,23.236 801.122,69.760 970.000,68.000 C1190.505,65.702 1214.544,0.000 1474.000,0.000 C1629.630,0.000 1752.499,84.359 1891.000,82.000 C2007.167,80.021 2179.498,33.902 2415.000,84.000 C2511.309,104.488 3080.987,160.934 3163.000,170.000 L3163.000,418.000 Z" />
+            </svg>
+        </div>
+    </footer>
+</body>
+
+</html>
