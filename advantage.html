@@ -221,16 +221,17 @@
             if (window.location.href.split('=')[1] == 'partner') {
                 partner()
             } else if (window.location.href.split('=')[1] == 'advantage') {
-                adf()
+                advantage()
             }
+
             $('#partner').click(function () {
                 partner()
             })
 
             $('#advantage').click(function () {
-                adf()
+                advantage()
             })
-            function adf() {
+            function advantage() {
                 $('#advantage').parent().children().removeClass('selected')
                 $('#advantage').addClass("selected")
 

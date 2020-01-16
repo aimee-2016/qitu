@@ -70,6 +70,7 @@ header {
     top: 0;
     z-index: 10;
     width: 100%;
+    min-width: 1200px;
     padding-top: 44px;
 }
 
@@ -101,6 +102,7 @@ header nav a:last-child {
 }
 
 footer {
+    min-width: 1200px;
     height: 686px;
     padding-top: 325px;
     background: url('../image/home/footer-bg.png') bottom center no-repeat;
